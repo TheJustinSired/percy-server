@@ -163,6 +163,16 @@ app.get('/tasks', (req, res) => {
     res.json(tasks);
 });
 
+import { generateTasksAutomatically } from './scheduler.js';
+
+if (process.argv[2] === 'run-percy') {
+  searchIndustryContacts();
+  generateTasksAutomatically();
+} else {
+  searchIndustryContacts();
+  generateTasksAutomatically();
+}
+
 app.listen(PORT, () => {
     console.log(`🚀 Percy is running at http://localhost:${PORT}`);
 });
