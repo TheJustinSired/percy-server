@@ -166,3 +166,6 @@ app.get('/tasks', (req, res) => {
 app.listen(PORT, () => {
     console.log(`🚀 Percy is running at http://localhost:${PORT}`);
 });
+
+export { searchIndustryContacts } from './index.js';
+export { generateTasksAutomatically } from './scheduler.js';
